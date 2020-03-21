@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import propTypes from "prop-types";
 import { Form } from "./styles";
-//import api from "../../services/api";
+import api from "../../services/api";
 
 export default class UserForm extends Component {
   state = {
@@ -11,13 +11,37 @@ export default class UserForm extends Component {
   };
 
   static propTypes = {
-    responseFunction: propTypes.func.isRequired
+    collectionResponse: propTypes.array.isRequired
   };
 
-  handleSearchRepositories = () => {
-    //const { user } = this.state;
-    //const { responseFunction } = this.props;
+  handleSearchRepositories = async e => {
+    e.preventDefault();
+    const { user } = this.state;
+    //const { collectionResponse } = this.props;
+
+    this.setState({ loading: true });
+
+    this.searchRepositories(user)
+      .then(data => {})
+      .catch(() => {
+        this.setState({ invalidUser: true });
+      })
+      .finally(() => {
+        this.setState({ loading: false });
+      });
   };
+
+  searchRepositories = user =>
+    new Promise(async (resolve, reject) => {
+      api
+        .get(`/users/${user}/repos`)
+        .then(({ data }) => {
+          resolve(data);
+        })
+        .catch(err => {
+          reject(err);
+        });
+    });
 
   render() {
     const { loading, invalidUser, user } = this.state;

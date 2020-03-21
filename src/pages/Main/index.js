@@ -1,13 +1,20 @@
-import React from "react";
+import React, { Component } from "react";
 import { Container } from "./styles";
 import logo from "../../assets/logo.png";
 import UserForm from "../../components/UserForm";
 
-const Main = () => (
-  <Container>
-    <img src={logo} alt="DasaHub" />
-    <UserForm />
-  </Container>
-);
+export default class Main extends Component {
+  state = {
+    repositories: []
+  };
 
-export default Main;
+  render() {
+    const { repositories } = this.state;
+    return (
+      <Container>
+        <img src={logo} alt="DasaHub" />
+        <UserForm collectionResponse={repositories} />
+      </Container>
+    );
+  }
+}
