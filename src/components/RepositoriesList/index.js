@@ -4,7 +4,6 @@ import { Container, Repositories } from "./styles";
 
 const RepositoriesList = ({ repositories }) => {
   if (repositories.length) {
-    console.tron.log(repositories[0].owner.avatar_url);
     return (
       <Container>
         <header>
