@@ -11,24 +11,34 @@ export default class UserForm extends Component {
   };
 
   static propTypes = {
-    collectionResponse: propTypes.array.isRequired
+    handleOutput: propTypes.func.isRequired
   };
 
   handleSearchRepositories = async e => {
     e.preventDefault();
     const { user } = this.state;
-    //const { collectionResponse } = this.props;
+    const { handleOutput } = this.props;
 
     this.setState({ loading: true });
 
     this.searchRepositories(user)
-      .then(data => {})
-      .catch(() => {
+      .then(data => {
+        handleOutput(data);
+      })
+      .catch(error => {
+        handleOutput([]);
         this.setState({ invalidUser: true });
       })
       .finally(() => {
         this.setState({ loading: false });
       });
+  };
+
+  handleUserChange = async e => {
+    this.setState({
+      user: e.target.value,
+      invalidUser: false
+    });
   };
 
   searchRepositories = user =>
@@ -39,7 +49,7 @@ export default class UserForm extends Component {
           resolve(data);
         })
         .catch(err => {
-          reject(err);
+          reject("", err);
         });
     });
 
@@ -51,7 +61,7 @@ export default class UserForm extends Component {
           type="text"
           placeholder="Usuário do GitHub"
           value={user}
-          onChange={e => this.setState({ user: e.target.value })}
+          onChange={e => this.handleUserChange(e)}
         />
         <button type="submit">
           {loading ? (

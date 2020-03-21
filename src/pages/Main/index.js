@@ -8,12 +8,16 @@ export default class Main extends Component {
     repositories: []
   };
 
+  handleRepositories = repositories => {
+    this.setState({ repositories });
+  };
+
   render() {
-    const { repositories } = this.state;
+    //const { repositories } = this.state;
     return (
       <Container>
         <img src={logo} alt="DasaHub" />
-        <UserForm collectionResponse={repositories} />
+        <UserForm handleOutput={this.handleRepositories} />
       </Container>
     );
   }
