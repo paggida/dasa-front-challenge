@@ -49,7 +49,7 @@ export default class UserForm extends Component {
           resolve(data);
         })
         .catch(err => {
-          reject("", err);
+          reject(err);
         });
     });
 
