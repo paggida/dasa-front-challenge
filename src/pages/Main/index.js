@@ -1,11 +1,12 @@
 import React from "react";
 import { Container } from "./styles";
 import logo from "../../assets/logo.png";
-//import api from "../../services/api";
+import UserForm from "../../components/UserForm";
 
 const Main = () => (
   <Container>
     <img src={logo} alt="DasaHub" />
+    <UserForm />
   </Container>
 );
 
