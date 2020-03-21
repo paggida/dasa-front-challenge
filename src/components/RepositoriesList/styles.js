@@ -8,7 +8,7 @@ export const Container = styled.div`
   justify-content: center;
   margin: ${metrics.baseMargin * 5 + metrics.base} 0px
     ${metrics.baseMargin * 4 + metrics.base} 0px;
-  min-width: 330px;
+  min-width: 500px;
   background: ${color.white};
   border-radius: ${metrics.baseRadius + metrics.base};
 

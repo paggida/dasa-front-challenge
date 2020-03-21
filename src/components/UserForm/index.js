@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import propTypes from "prop-types";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { Form } from "./styles";
 import api from "../../services/api";
 
@@ -23,22 +25,45 @@ export default class UserForm extends Component {
 
     this.searchRepositories(user)
       .then(data => {
-        handleOutput(data);
+        if (data.length) {
+          handleOutput(data);
+        } else {
+          handleOutput([]);
+          toast.success("Usuário sem repositórios.");
+        }
       })
       .catch(error => {
+        this.handleError(error.response ? error.response.status : 0);
         handleOutput([]);
-        this.setState({ invalidUser: true });
       })
       .finally(() => {
         this.setState({ loading: false });
       });
   };
 
-  handleUserChange = async e => {
+  handleUserChange = e => {
     this.setState({
       user: e.target.value,
       invalidUser: false
     });
+  };
+
+  handleError = statusCode => {
+    let message;
+
+    switch (statusCode) {
+      case 0:
+        message = "Erro de comunicação.";
+        break;
+      case 404:
+        this.setState({ invalidUser: true });
+        message = "Usuário não encontrado.";
+        break;
+      default:
+        message = "Erro desconhecido no Git.";
+    }
+
+    toast.error(message);
   };
 
   searchRepositories = user =>
