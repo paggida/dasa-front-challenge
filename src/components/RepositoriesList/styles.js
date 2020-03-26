@@ -11,6 +11,7 @@ export const Container = styled.div`
   min-width: 500px;
   background: ${color.white};
   border-radius: ${metrics.baseRadius + metrics.base};
+  overflow: hidden;
 
   header {
     padding: ${metrics.basePadding + 10 + metrics.base};
