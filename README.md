@@ -1,3 +1,6 @@
+![Logo](src/assets/logo.png)
+
+
 # Dasa Challenge (Front End)
 The project lists a GitHub user's repositories
 
@@ -8,11 +11,12 @@ The project lists a GitHub user's repositories
   - Axios
   - Font-Awesome
   - Prop-Types
+  - Jest
 
 ## Prerequisite
 It's necessary that in the application environment you've:<br>
 
-- Dependency management, you may choose Yarn (https://yarnpkg.com/lang/en/) or NPM (It come with Node's installation).
+- Dependency management, you may choose Yarn (https://yarnpkg.com/lang/en/) or NPM (https://www.npmjs.com/).
 
 ## Installation
 For the correct operation of the application, it's necessary to perform the following procedures:<br>
@@ -38,3 +42,22 @@ The project will be displayed to `http://localhost:3000`
 
 ## Functionality
 You must type the Git User'name to search in the text box then click in the "Buscar repositórios" button.
+
+<p align="center">
+  <img src="src/assets/application.png" alt="Application's screen" style="border-radius: 6px;"/>
+</p>
+
+## Testing
+At the root of project path use the command below, it's corresponding to your dependency management:
+
+     yarn test
+
+or
+
+    npm test
+
+It'll launche the test runner in the interactive watch mode.
+
+<img src="src/assets/testesWatch.png" alt="Tests watch" style="border-radius: 6px; border: 1px solid;"/>
+
+In this mode, you need click **'a'** and the **Enter** key to run all tests, and to close you click **'q'** and the **Enter** key.
