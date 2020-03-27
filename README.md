@@ -44,7 +44,7 @@ The project will be displayed to `http://localhost:3000`
 You must type the Git User'name to search in the text box then click in the "Buscar repositórios" button.
 
 <div align="center">
-  <img src="src/assets/Application.png" alt="Application's screen" style="border-radius: 6px;"/>
+  <img src="src/assets/Application.png" alt="Application's screen"/>
 </div>
 
 ## Testing
@@ -58,6 +58,6 @@ or
 
 It'll launche the test runner in the interactive watch mode.
 
-<img src="src/assets/testesWatch.png" alt="Tests watch" style="border-radius: 6px;"/>
+<img src="src/assets/testesWatch.png" alt="Tests watch"/>
 
 In this mode, you need click **'a'** and the **Enter** key to run all tests, and to close you click **'q'** and the **Enter** key.
