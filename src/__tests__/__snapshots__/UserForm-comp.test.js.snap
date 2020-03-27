@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render the user form 1`] = `
+<UserForm
+  handleOutput={[Function]}
+>
+  <styled.form
+    onSubmit={[Function]}
+    withError={false}
+  >
+    <form
+      className="sc-AxjAm fciyZm"
+      onSubmit={[Function]}
+    >
+      <input
+        onChange={[Function]}
+        placeholder="Usuário do GitHub"
+        type="text"
+        value=""
+      />
+      <button
+        id="searchBtn"
+        type="submit"
+      >
+        Buscar repositórios
+      </button>
+    </form>
+  </styled.form>
+</UserForm>
+`;

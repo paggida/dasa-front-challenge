@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render the homepage 1`] = `
+<Main>
+  <styled.div>
+    <div
+      className="sc-AxjAm dHUTpM"
+    >
+      <img
+        alt="DasaHub"
+        src="logo.png"
+      />
+      <UserForm
+        handleOutput={[Function]}
+      >
+        <styled.form
+          onSubmit={[Function]}
+          withError={false}
+        >
+          <form
+            className="sc-AxirZ lbOMdt"
+            onSubmit={[Function]}
+          >
+            <input
+              onChange={[Function]}
+              placeholder="Usuário do GitHub"
+              type="text"
+              value=""
+            />
+            <button
+              id="searchBtn"
+              type="submit"
+            >
+              Buscar repositórios
+            </button>
+          </form>
+        </styled.form>
+      </UserForm>
+      <RepositoriesList
+        repositories={Array []}
+      >
+        <div />
+      </RepositoriesList>
+    </div>
+  </styled.div>
+</Main>
+`;

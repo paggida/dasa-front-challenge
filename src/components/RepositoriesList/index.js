@@ -15,10 +15,10 @@ const RepositoriesList = ({ repositories }) => {
         </header>
         <Repositories>
           <ul>
-            {repositories.map(repository => (
-              <li>
-                <strong>{repository.name}</strong>
-                {repository.stargazers_count} <small>stars</small>
+            {repositories.map(({id, name, stargazers_count}) => (
+              <li key={id}>
+                <strong>{name}</strong>
+                {stargazers_count} <small>stars</small>
               </li>
             ))}
           </ul>

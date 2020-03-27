@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render the list of repositories for a populated repository group 1`] = `
+<RepositoriesList
+  repositories={
+    Array [
+      Object {
+        "id": 1,
+        "name": "Repo01",
+        "owner": Object {
+          "avatar_url": "https://avatars2.githubusercontent.com/u/69631?s=200&v=4",
+          "login": "Tester01",
+        },
+        "stargazers_count": 11,
+      },
+      Object {
+        "id": 2,
+        "name": "Repo02",
+        "owner": Object {
+          "avatar_url": "https://avatars2.githubusercontent.com/u/69631?s=200&v=4",
+          "login": "Tester02",
+        },
+        "stargazers_count": 12,
+      },
+    ]
+  }
+>
+  <styled.div>
+    <div
+      className="sc-AxjAm ggwBWc"
+    >
+      <header>
+        <img
+          alt="Tester01"
+          src="https://avatars2.githubusercontent.com/u/69631?s=200&v=4"
+        />
+        <small>
+          Tester01
+        </small>
+      </header>
+      <styled.div>
+        <div
+          className="sc-AxirZ ccREzF"
+        >
+          <ul>
+            <li
+              key="1"
+            >
+              <strong>
+                Repo01
+              </strong>
+              11
+               
+              <small>
+                stars
+              </small>
+            </li>
+            <li
+              key="2"
+            >
+              <strong>
+                Repo02
+              </strong>
+              12
+               
+              <small>
+                stars
+              </small>
+            </li>
+          </ul>
+        </div>
+      </styled.div>
+    </div>
+  </styled.div>
+</RepositoriesList>
+`;
+
+exports[`Should render the repositories list for an empty repository group 1`] = `
+<RepositoriesList
+  repositories={Array []}
+>
+  <div />
+</RepositoriesList>
+`;
