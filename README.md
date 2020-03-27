@@ -1,7 +1,5 @@
 ![Logo](src/assets/logoBorder.png)
 
-
-# Dasa Challenge (Front End)
 The project lists a GitHub user's repositories
 
 ## Technologies used
