@@ -1,4 +1,4 @@
-![Logo](src/assets/logo.png)
+![Logo](src/assets/logoBorder.png)
 
 
 # Dasa Challenge (Front End)
@@ -43,9 +43,9 @@ The project will be displayed to `http://localhost:3000`
 ## Functionality
 You must type the Git User'name to search in the text box then click in the "Buscar repositórios" button.
 
-<p align="center">
-  <img src="src/assets/application.png" alt="Application's screen" style="border-radius: 6px;"/>
-</p>
+<div align="center">
+  <img src="src/assets/Application.png" alt="Application's screen" style="border-radius: 6px;"/>
+</div>
 
 ## Testing
 At the root of project path use the command below, it's corresponding to your dependency management:
@@ -58,6 +58,6 @@ or
 
 It'll launche the test runner in the interactive watch mode.
 
-<img src="src/assets/testesWatch.png" alt="Tests watch" style="border-radius: 6px; border: 1px solid;"/>
+<img src="src/assets/testesWatch.png" alt="Tests watch" style="border-radius: 6px;"/>
 
 In this mode, you need click **'a'** and the **Enter** key to run all tests, and to close you click **'q'** and the **Enter** key.
